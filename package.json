@@ -1,23 +1,23 @@
 {
-    "_from": "fzf@^0.27.2",
-    "_id": "zsh-fzf@0.27.2",
+    "_from": "fzf@^0.28.0",
+    "_id": "zsh-fzf@0.28.0",
     "_inBundle": false,
     "_location": "/zsh-fzf",
     "_phantomChildren": {},
     "_requested": {
         "type": "range",
         "registry": true,
-        "raw": "fzf@^0.27.2",
+        "raw": "fzf@^0.28.0",
         "name": "fzf",
         "escapedName": "fzf",
-        "rawSpec": "^0.27.2",
+        "rawSpec": "^0.28.0",
         "saveSpec": null,
-        "fetchSpec": "^0.27.2"
+        "fetchSpec": "^0.28.0"
     },
     "_requiredBy": [],
-    "_resolved": "https://github.com/junegunn/fzf/archive/0.27.2.tar.gz",
-    "_shasum": "1bf77b90cb3d8ea3188d8a0832fa05aa07f0485d",
-    "_spec": "fzf@^0.27.2",
+    "_resolved": "https://github.com/junegunn/fzf/archive/0.28.0.tar.gz",
+    "_shasum": "1fa6628375a84e89d6b201d450c4d14ac40cdcd7",
+    "_spec": "fzf@^0.28.0",
     "_where": "/root/github2/pkg-fzf",
     "author": "Junegunn Choi",
     "bugs": {
@@ -43,12 +43,12 @@
     "scripts": {
         "test": "make test"
     },
-    "version": "0.27.2",
+    "version": "0.28.0",
     "zsh-data": {
         "plugin-info": {
             "user": "junegunn",
             "plugin": "fzf",
-            "version": "0.27.2"
+            "version": "0.28.0"
         },
         "zplugin-ices": {
             "default": {
