@@ -1,49 +1,58 @@
-# `JUNEGUNN/FZF` ZINIT PACKAGE
-
-## Homepage link: [junegunn/fzf](https://github.com/junegunn/fzf)
-
 | **Package source:** |  Source Tarball  | Binary | Git | Node | Gem |
-|:-------------------:|:----------------:|:------:|:---:|:----:|:---:|
+| :-----------------: | :--------------: | :----: | :-: | :--: | :-: |
 |     **Status:**     | + <br> (default) |   +    |  +  |  –   |  -  |
 
-[Zinit](https://github.com/z-shell/Zinit) can use `package.json` to automatically:
+- [Introduction](#introduction)
+- [Install](#install)
+  - [Available `pack''` invocations](#available-pack-invocations)
+  - [Default Profile](#default-profile)
+  - [Bin-Gem-Node Profile](#bin-gem-node-profile)
+
+# Introduction
+
+> **[?]**
+> This repository not compatible with previous versions (zplugin, zinit).
+>
+> Please upgrade to [ZI](https://github.com/z-shell-zi)
+
+The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package than can use the NPM package registry to automatically:
 
 - get the plugin's Git repository OR release-package URL,
 - get the list of the recommended ices for the plugin,
   - there can be multiple lists of ices,
-  - the ice lists are stored in *profiles*; there's at least one profile, *default*,
-  - the ices can be selectively overriden.
+  - the ice lists are stored in _profiles_; there's at least one profile, _default_,
+  - the ices can be selectively overridden.
 
-More documentation on Zinit Packages can be 
-found on the [Zinit Wiki](https://z-shell.github.io/zinit/wiki/Zinit-Packages/).
+# Install
 
-Example invocations that'll install
+## Available `pack''` invocations
+
 [junegunn/fzf](https://github.com/junegunn/fzf) either from the release archive
 or from Git repository:
 
 ```zsh
 # Download the package with the default ice list
-zinit pack for fzf
+zi pack for fzf
 
 # Download the package with the default ice list + setting up the key bindings
-zinit pack"default+keys" for fzf
+zi pack"default+keys" for fzf
 
 # Download the package with the bin-gem-node annex-utilizing ice list
-zinit pack"bgn" for fzf
+zi pack"bgn" for fzf
 
 # Download the package with the bin-gem-node annex-utilizing ice list
 # + setting up the key bindings. The "+keys" variants are available
 # for each profile
-zinit pack"bgn+keys" for fzf
+zi pack"bgn+keys" for fzf
 
 # Download with the bin-gem-node annex-utilizing ice list FROM GIT REPOSITORY
-zinit pack"bgn" git for fzf
+zi pack"bgn" git for fzf
 
 # Download the binary from the Github releases (like from'gh-r' ice)
-zinit pack"binary" for fzf
+zi pack"binary" for fzf
 
 # Download the binary from the Github releases and install via Bin-Gem-Node shims
-zinit pack"bgn-binary" for fzf
+zi pack"bgn-binary" for fzf
 ```
 
 ## Default Profile
@@ -52,7 +61,7 @@ Provides the fuzzy finder via Makefile-installation of the `fzf` binary under
 `$ZPFX/bin`.
 
 ```zsh
-zinit lucid as=program pick="$ZPFX/bin/(fzf|fzf-tmux)" \
+zi lucid as=program pick="$ZPFX/bin/(fzf|fzf-tmux)" \
     atclone="cp shell/completion.zsh _fzf_completion; cp bin/fzf-tmux $ZPFX/bin" \
     make="PREFIX=$ZPFX install" \
     …
@@ -60,15 +69,13 @@ zinit lucid as=program pick="$ZPFX/bin/(fzf|fzf-tmux)" \
 
 ## Bin-Gem-Node Profile
 
-Provides the fuzzy finder via *shims*, i.e.: automatic forwarder scripts created
+Provides the fuzzy finder via _shims_, i.e.: automatic forwarder scripts created
 under `$ZPFX/bin` (which is added to the `$PATH` by default). It needs the
 [bin-gem-node](https://github.com/z-shell/z-a-bin-gem-node) annex.
 
 ```zsh
-zinit lucid as=null make \
+zi lucid as=null make \
     atclone="cp shell/completion.zsh _fzf_completion" \
     sbin="fzf;bin/fzf-tmux" \
     …
 ```
-
-<!-- vim:set ft=markdown tw=80 fo+=an1 autoindent: -->

@@ -50,7 +50,7 @@
             "plugin": "fzf",
             "version": "0.28.0"
         },
-        "zplugin-ices": {
+        "zi-ices": {
             "default": {
                 "requires": "go;make;cp",
                 "depth": 1,
