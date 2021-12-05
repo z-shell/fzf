@@ -8,28 +8,28 @@
 
 - [Introduction](#introduction)
 - [Install](#install)
-	- [Available `pack''` invocations](#available-pack-invocations)
-	- [Default Profile](#default-profile)
-	- [`Bin-Gem-Node` Profile](#bin-gem-node-profile)
+  - [Available `pack''` invocations](#available-pack-invocations)
+  - [Default Profile](#default-profile)
+  - [`Bin-Gem-Node` Profile](#bin-gem-node-profile)
 
-# Introduction
+## Introduction
 
 > **[?]**
 > This repository not compatible with previous versions (zplugin, zinit).
 >
 > Please upgrade to [ZI](https://github.com/z-shell-zi)
 
-The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package than can use the NPM package registry to automatically:
+The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package that can use the NPM package registry to automatically:
 
--   get the plugin's Git repository OR release-package URL,
--   get the list of the recommended ices for the plugin,
-    -   there can be multiple lists of ices,
-    -   the ice lists are stored in _profiles_; there's at least one profile, _default_,
-    -   the ices can be selectively overridden.
+- get the plugin's Git repository OR release-package URL,
+- get the list of the recommended ices for the plugin,
+  - there can be multiple lists of ices,
+  - the ice lists are stored in _profiles_; there's at least one profile, _default_,
+  - the ices can be selectively overridden.
 
-# Install
+## Install
 
-## Available `pack''` invocations
+### Available `pack''` invocations
 
 ```zsh
 # Download the package with the default ice list
@@ -56,7 +56,7 @@ zi pack"binary" for fzf
 zi pack"bgn-binary" for fzf
 ```
 
-## Default Profile
+### Default Profile
 
 Provides the fuzzy finder via Makefile-installation of the `fzf` binary under
 `$ZPFX/bin`.
@@ -68,7 +68,7 @@ zi lucid as=program pick="$ZPFX/bin/(fzf|fzf-tmux)" \
     …
 ```
 
-## `Bin-Gem-Node` Profile
+### `Bin-Gem-Node` Profile
 
 Provides the fuzzy finder via _shims_, i.e.: automatic forwarder scripts created
 under `$ZPFX/bin` (which is added to the `$PATH` by default). It needs the
