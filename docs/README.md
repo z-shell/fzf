@@ -5,25 +5,13 @@
 ❮ ZI ❯ Package - fzf
 </h2>
 
-<h2 align="center">
+<h3 align="center">
   
 | **Package source:** |        Source Tarball        |       Binary       |        Git         | Node | Gem |
 | :-----------------: | :--------------------------: | :----------------: | :----------------: | :--: | :-: |
 |     **Status:**     | :heavy_check_mark: (default) | :heavy_check_mark: | :heavy_check_mark: | :x:  | :x: |
 
-</h2>
-
-> This repository compatible with [ZI](https://github.com/z-shell-zi)
-
-The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package that can use the NPM package registry to automatically:
-
-- get the plugin's Git repository OR release-package URL,
-- get the list of the recommended ices for the plugin,
-  - there can be multiple lists of ices,
-  - the ice lists are stored in _profiles_; there's at least one profile, _default_,
-  - the ices can be selectively overridden.
-
-## Install
+</h3>
 
 ### Available `pack''` invocations
 
@@ -76,3 +64,15 @@ zi lucid as=null make \
     sbin="fzf;bin/fzf-tmux" \
     …
 ```
+
+---
+
+> This repository compatible with [ZI](https://github.com/z-shell/zi)
+
+The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package that can use the NPM package registry to automatically:
+
+- get the plugin's Git repository OR release-package URL,
+- get the list of the recommended ices for the plugin,
+  - there can be multiple lists of ices,
+  - the ice lists are stored in _profiles_; there's at least one profile, _default_,
+  - the ices can be selectively overridden.
