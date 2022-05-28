@@ -1,36 +1,10 @@
 {
-  "_from": "fzf@^0.29.0",
-  "_id": "zsh-fzf@0.29.0",
-  "_inBundle": false,
-  "_location": "/zsh-fzf",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "fzf@^0.29.0",
-    "name": "fzf",
-    "escapedName": "fzf",
-    "rawSpec": "^0.29.0",
-    "saveSpec": null,
-    "fetchSpec": "^0.29.0"
-  },
-  "_requiredBy": [],
-  "_resolved": "https://github.com/junegunn/fzf/archive/0.29.0.tar.gz",
-  "_shasum": "859919b127e65274b54bb5ada3419cd9fa445e64",
-  "_spec": "fzf@^0.29.0",
-  "_where": "/root/github2/pkg-fzf",
+  "name": "zsh-fzf",
   "author": "Junegunn Choi",
   "bugs": {
     "url": "https://github.com/junegunn/fzf/issues"
   },
-  "contributors": [],
-  "dependencies": {},
-  "deprecated": false,
   "description": "A command-line fuzzy finder",
-  "devDependencies": {},
-  "directories": {
-    "test": "test"
-  },
   "homepage": "https://github.com/junegunn/fzf",
   "keywords": [
     "fuzzy finder",
@@ -39,60 +13,55 @@
     "fuzzy"
   ],
   "license": "MIT",
-  "name": "zsh-fzf",
-  "scripts": {
-    "test": "make test"
-  },
-  "version": "0.29.0",
   "zsh-data": {
     "plugin-info": {
       "user": "junegunn",
       "plugin": "fzf",
-      "version": "0.29.0"
+      "version": "0.30.0"
     },
     "zi-ices": {
       "default": {
         "requires": "go;make;cp",
+        "git": "",
         "depth": 1,
         "lucid": "",
         "as": "command",
         "pick": "$ZPFX/bin/fzf(|-tmux)",
-        "atclone": "[[ -z $FZF_VERSION ]] && FZF_VERSION=0.29.0; command mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf bin/fzf(|-tmux) $ZPFX/bin; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
+        "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && command mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf bin/fzf(|-tmux) $ZPFX/bin; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
         "atpull": "%atclone",
-        "make": "!PREFIX=$ZPFX install",
         "nocompile": ""
       },
       "default+keys": {
         "requires": "go;make;cp",
+        "git": "",
         "depth": 1,
         "lucid": "",
         "as": "command",
         "pick": "$ZPFX/bin/fzf(|-tmux)",
-        "atclone": "mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf bin/fzf(|-tmux) $ZPFX/bin; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
+        "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf bin/fzf(|-tmux) $ZPFX/bin; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
         "atpull": "%atclone",
-        "make": "!PREFIX=$ZPFX install",
         "src": "shell/key-bindings.zsh",
         "nocompile": ""
       },
       "bgn": {
         "requires": "go;make;cp;bgn",
+        "git": "",
         "depth": 1,
         "lucid": "",
         "pick": "/dev/null",
-        "atclone": "mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
+        "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
         "atpull": "%atclone",
-        "make": "install",
         "sbin": "bin/fzf*",
         "nocompile": ""
       },
       "bgn+keys": {
         "requires": "go;make;cp;bgn",
+        "git": "",
         "depth": 1,
         "lucid": "",
         "pick": "/dev/null",
-        "atclone": "mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
+        "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
         "atpull": "%atclone",
-        "make": "install",
         "sbin": "bin/fzf*",
         "src": "shell/key-bindings.zsh",
         "nocompile": ""
