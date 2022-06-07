@@ -1,21 +1,19 @@
-<!-- markdownlint-disable MD041 -->
-<div width="100%" align="center"><table>
-  <tr><td align="center">
-  <a title="ZI" target="_self" href="https://github.com/z-shell/zi/">
-    <h2><img align="center" style="width:60px;height:auto" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="ZI Logo" /></a>
-❮ ZI ❯ Package - fzf </h2>
-    <h3> A command-line fuzzy finder </h3>
-  </td></tr>
-  <tr><td width="100%" align="center">
-  <h2>
+<div align="center" width="100%"><table><tr><td>
+  <h1><a target="_self" href="https://github.com/z-shell/zi/">
+    <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="ZI Logo" width="60px" height="60px" /></a>
+    ❮ ZI ❯ Package - fzf </h1>
+<h2 align="center">
 
 | **Package source:** |        Source Tarball        |       Binary       |        Git         | Node | Gem |
 | :-----------------: | :--------------------------: | :----------------: | :----------------: | :--: | :-: |
 |     **Status:**     | :heavy_check_mark: (default) | :heavy_check_mark: | :heavy_check_mark: | :x:  | :x: |
 
 </h2>
-<img align="center" style="width:80%;height:auto" src="img/fzf-example-preview.png" alt="Preview" />
-</td></tr></table></div>
+  <h3 align="center">
+  <p> A command-line fuzzy finder
+  <p><img align="center" src="img/fzf-example-preview.png" alt="zi package fzf" width="100%" height="auto" /><p>
+  </h3>
+</td></tr></table></div><hr />
 
 ### Available `pack''` invocations
 
