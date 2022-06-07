@@ -31,91 +31,91 @@
         "atpull": "%atclone",
         "nocompile": ""
       },
-        "default+keys": {
-          "requires": "go;make;cp",
-          "git": "",
-          "depth": 1,
-          "lucid": "",
-          "as": "command",
-          "pick": "$ZPFX/bin/fzf(|-tmux)",
-          "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf bin/fzf(|-tmux) $ZPFX/bin; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
-          "atpull": "%atclone",
-          "src": "shell/key-bindings.zsh",
-          "nocompile": ""
-        },
-        "bgn": {
-          "requires": "go;make;cp;bgn",
-          "git": "",
-          "depth": 1,
-          "lucid": "",
-          "pick": "/dev/null",
-          "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
-          "atpull": "%atclone",
-          "sbin": "bin/fzf*",
-          "nocompile": ""
-        },
-        "bgn+keys": {
-          "requires": "go;make;cp;bgn",
-          "git": "",
-          "depth": 1,
-          "lucid": "",
-          "pick": "/dev/null",
-          "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
-          "atpull": "%atclone",
-          "sbin": "bin/fzf*",
-          "src": "shell/key-bindings.zsh",
-          "nocompile": ""
-        },
-        "binary": {
-          "requires": "cp",
-          "plugin": "fzf",
-          "from": "gh-r",
-          "lucid": "",
-          "as": "command",
-          "pick": "$ZPFX/bin/fzf",
-          "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
-          "atclone": "mkdir -p $ZPFX/bin; cp -vf fzf $ZPFX/bin",
-          "atpull": "%atclone",
-          "nocompile": ""
-        },
-        "binary+keys": {
-          "requires": "cp;dl",
-          "plugin": "fzf",
-          "from": "gh-r",
-          "lucid": "",
-          "as": "command",
-          "pick": "$ZPFX/bin/fzf",
-          "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -> key-bindings.zsh; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
-          "atclone": "mkdir -p $ZPFX/bin; cp -vf fzf $ZPFX/bin",
-          "atpull": "%atclone",
-          "src": "key-bindings.zsh",
-          "nocompile": ""
-        },
-        "bgn-binary": {
-          "requires": "cp;bgn",
-          "plugin": "fzf",
-          "from": "gh-r",
-          "lucid": "",
-          "pick": "/dev/null",
-          "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
-          "atclone": "mkdir -p $ZPFX/{bin,man/man1}",
-          "atpull": "%atclone",
-          "sbin": "fzf",
-          "nocompile": ""
-        },
-        "bgn-binary+keys": {
-          "requires": "cp;bgn;dl",
-          "plugin": "fzf",
-          "from": "gh-r",
-          "lucid": "",
-          "pick": "/dev/null",
-          "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -> key-bindings.zsh; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
-          "atclone": "mkdir -p $ZPFX/{bin,man/man1}",
-          "atpull": "%atclone",
-          "sbin": "fzf",
-          "src": "key-bindings.zsh",
-          "nocompile": ""
-        }
+      "default+keys": {
+        "requires": "go;make;cp",
+        "git": "",
+        "depth": 1,
+        "lucid": "",
+        "as": "command",
+        "pick": "$ZPFX/bin/fzf(|-tmux)",
+        "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf bin/fzf(|-tmux) $ZPFX/bin; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
+        "atpull": "%atclone",
+        "src": "shell/key-bindings.zsh",
+        "nocompile": ""
+      },
+      "bgn": {
+        "requires": "go;make;cp;bgn",
+        "git": "",
+        "depth": 1,
+        "lucid": "",
+        "pick": "/dev/null",
+        "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
+        "atpull": "%atclone",
+        "sbin": "bin/fzf*",
+        "nocompile": ""
+      },
+      "bgn+keys": {
+        "requires": "go;make;cp;bgn",
+        "git": "",
+        "depth": 1,
+        "lucid": "",
+        "pick": "/dev/null",
+        "atclone": "PREFIX=$ZPFX FZF_VERSION=0.30.0 FZF_REVISION=zi-pack make install && mkdir -p $ZPFX/{bin,man/man1}; cp shell/completion.zsh _fzf_completion; cp -vf man/man1/fzf(|-tmux).1 $ZPFX/man/man1",
+        "atpull": "%atclone",
+        "sbin": "bin/fzf*",
+        "src": "shell/key-bindings.zsh",
+        "nocompile": ""
+      },
+      "binary": {
+        "requires": "cp",
+        "plugin": "fzf",
+        "from": "gh-r",
+        "lucid": "",
+        "as": "command",
+        "pick": "$ZPFX/bin/fzf",
+        "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
+        "atclone": "mkdir -p $ZPFX/bin; cp -vf fzf $ZPFX/bin",
+        "atpull": "%atclone",
+        "nocompile": ""
+      },
+      "binary+keys": {
+        "requires": "cp;dl",
+        "plugin": "fzf",
+        "from": "gh-r",
+        "lucid": "",
+        "as": "command",
+        "pick": "$ZPFX/bin/fzf",
+        "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -> key-bindings.zsh; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
+        "atclone": "mkdir -p $ZPFX/bin; cp -vf fzf $ZPFX/bin",
+        "atpull": "%atclone",
+        "src": "key-bindings.zsh",
+        "nocompile": ""
+      },
+      "bgn-binary": {
+        "requires": "cp;bgn",
+        "plugin": "fzf",
+        "from": "gh-r",
+        "lucid": "",
+        "pick": "/dev/null",
+        "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
+        "atclone": "mkdir -p $ZPFX/{bin,man/man1}",
+        "atpull": "%atclone",
+        "sbin": "fzf",
+        "nocompile": ""
+      },
+      "bgn-binary+keys": {
+        "requires": "cp;bgn;dl",
+        "plugin": "fzf",
+        "from": "gh-r",
+        "lucid": "",
+        "pick": "/dev/null",
+        "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -> key-bindings.zsh; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
+        "atclone": "mkdir -p $ZPFX/{bin,man/man1}",
+        "atpull": "%atclone",
+        "sbin": "fzf",
+        "src": "key-bindings.zsh",
+        "nocompile": ""
       }
     }
+  }
 }
