@@ -79,7 +79,7 @@ zi lucid as=null make \
 
 > This repository compatible with [ZI](https://github.com/z-shell/zi)
 
-The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package that uses a [string library](https://github.com/z-shell/zsh-string-lib) for Zsh which will:
+The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package that uses the [zsh-string-lib](https://github.com/z-shell/zsh-string-lib) to automatically:
 
 - get the plugin's Git repository OR release-package URL,
 - get the list of the recommended ices for the plugin,
