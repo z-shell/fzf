@@ -7,6 +7,6 @@
     "theme"
   ],
   "markdownlint.config": {
-    "extends": ".github/.markdownlint.yaml"
+    "extends": ".github/.markdownlint.yaml",
   }
 }
