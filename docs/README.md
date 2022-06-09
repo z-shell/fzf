@@ -1,19 +1,30 @@
-<div align="center" width="100%"><table><tr><td>
-  <h1><a target="_self" href="https://github.com/z-shell/zi/">
-    <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="ZI Logo" width="60px" height="60px" /></a>
-    ❮ ZI ❯ Package - fzf </h1>
-<h2 align="center">
-
-| **Package source:** |        Source Tarball        |       Binary       |        Git         | Node | Gem |
-| :-----------------: | :--------------------------: | :----------------: | :----------------: | :--: | :-: |
-|     **Status:**     | :heavy_check_mark: (default) | :heavy_check_mark: | :heavy_check_mark: | :x:  | :x: |
-
-</h2>
-  <h3 align="center">
-  <p> A command-line fuzzy finder
-  <p><img align="center" src="img/fzf-example-preview.png" alt="zi package fzf" width="100%" height="auto" /><p>
-  </h3>
-</td></tr></table></div><hr />
+<table align="center"><tr><td>
+<h1 align="center"><a target="_self" href="https://github.com/z-shell/zi/">
+  <p><img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="ZI Logo" width="60px" height="60px" /></a>
+  ❮ ZI ❯ Package - fzf </p>
+</h1>
+<h2 align="center"><p> A command-line fuzzy finder </p></h2>
+<h3 align="center">
+<table>
+    <tr>
+        <td><b>Package source:</b></td>
+        <td>Source Tarball</td>
+        <td>Binary</td>
+        <td>Git</td>
+        <td>Node</td>
+        <td>Gem</td>
+    </tr>
+    <tr>
+        <td><b>Status:</b></td>
+        <td>✔️ (default)</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>❌</td>
+    </tr>
+</table></h3>
+<p><img align="center" src="img/fzf-example-preview.png" alt="zi package fzf" width="100%" height="auto" /><p>
+</td></tr></table><hr />
 
 ### Available `pack''` invocations
 
