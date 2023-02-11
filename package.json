@@ -91,7 +91,7 @@
         "plugin": "fzf",
         "from": "gh-r",
         "lucid": "",
-        "pick": "/dev/null",
+        "as": "null",
         "dl": "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1; https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1",
         "atclone": "mkdir -p $ZPFX/{bin,man/man1}",
         "atpull": "%atclone",
