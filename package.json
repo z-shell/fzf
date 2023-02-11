@@ -88,7 +88,7 @@
       },
       "bgn-binary": {
         "requires": "cp;bgn",
-        "plugin": "fzf",
+        "id-as": "fzf",
         "from": "gh-r",
         "lucid": "",
         "as": "null",
