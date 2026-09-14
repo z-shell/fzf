@@ -103,3 +103,26 @@ The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package. Zi's package su
   - there can be multiple lists of ices,
   - the ice lists are stored in _profiles_; there's at least one profile, _default_,
   - the ices can be selectively overridden.
+
+## Native binary and shell integration
+
+```zsh
+zi pack'native+keys' for fzf
+```
+
+This profile loads the release executable through Zi's native program support.
+At install/update it caches `fzf --zsh` output and fetches `fzf-tmux` from the
+matching release tag. Loading sources the cached integration without a new
+generator process. The binary, shell integration, and tmux helper stay paired.
+No bin-gem-node or patch-dl annex is required for this profile.
+
+The upstream completion and keybinding defaults apply. Set `FZF_CTRL_T_COMMAND`,
+`FZF_ALT_C_COMMAND`, or `FZF_CTRL_R_COMMAND` to an empty string before loading
+to disable the corresponding binding. Existing profiles remain available.
+
+The source profiles (`default`, `default+keys`, `bgn`, `bgn+keys`) require an
+existing Go compiler compatible with upstream's `go.mod`, plus make and Git.
+Builds use `GOTOOLCHAIN=local` so an incompatible compiler fails without
+automatically downloading another Go toolchain. Dependencies still download
+through Go's normal module mechanism. Source profiles load their checked-out
+completion integration directly; `+keys` additionally loads the keybindings.
