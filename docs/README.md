@@ -75,22 +75,25 @@ zi pack"bgn-binary" for fzf
 Provides the fuzzy finder via Makefile-installation of the `fzf` binary under `$ZPFX/bin`.
 
 ```zsh
-zi lucid as=program pick="$ZPFX/bin/(fzf|fzf-tmux)" \
-  atclone="cp shell/completion.zsh _fzf_completion; cp bin/fzf-tmux $ZPFX/bin" \
-    make="PREFIX=$ZPFX install" \
+zi lucid as=program pick="$ZPFX/bin/fzf(|-tmux)" src="shell/completion.zsh" \
+  atclone='GOTOOLCHAIN=local PREFIX=$ZPFX make install && cp -vf bin/fzf(|-tmux) "$ZPFX/bin"' \
     …
 ```
+
+The `default+keys` profile loads `shell/key-bindings.zsh` after the completion.
 
 ## `bin-gem-node` Profile
 
 Provides the fuzzy finder via _shims_, i.e.: automatic forwarder scripts created under `$ZPFX/bin` (which is added to the `$PATH` by default). It needs the [bin-gem-node](https://github.com/z-shell/z-a-bin-gem-node) annex.
 
 ```zsh
-zi lucid as=null make \
-  atclone="cp shell/completion.zsh _fzf_completion" \
-  sbin="fzf;bin/fzf-tmux" \
+zi lucid as=null src="shell/completion.zsh" \
+  atclone='GOTOOLCHAIN=local PREFIX=$ZPFX make install' \
+  sbin="bin/fzf*" \
   …
 ```
+
+The `bgn+keys` profile loads `shell/key-bindings.zsh` after the completion.
 
 ---
 
@@ -103,3 +106,26 @@ The [junegunn/fzf](https://github.com/junegunn/fzf) zsh package. Zi's package su
   - there can be multiple lists of ices,
   - the ice lists are stored in _profiles_; there's at least one profile, _default_,
   - the ices can be selectively overridden.
+
+## Native binary and shell integration
+
+```zsh
+zi pack'native+keys' for fzf
+```
+
+This profile loads the release executable through Zi's native program support.
+At install/update it caches `fzf --zsh` output and fetches `fzf-tmux` from the
+matching release tag. Loading sources the cached integration without a new
+generator process. The binary, shell integration, and tmux helper stay paired.
+No bin-gem-node or patch-dl annex is required for this profile.
+
+The upstream completion and keybinding defaults apply. Set `FZF_CTRL_T_COMMAND`,
+`FZF_ALT_C_COMMAND`, or `FZF_CTRL_R_COMMAND` to an empty string before loading
+to disable the corresponding binding. Existing profiles remain available.
+
+The source profiles (`default`, `default+keys`, `bgn`, `bgn+keys`) require an
+existing Go compiler compatible with upstream's `go.mod`, plus make and Git.
+Builds use `GOTOOLCHAIN=local` so an incompatible compiler fails without
+automatically downloading another Go toolchain. Dependencies still download
+through Go's normal module mechanism. Source profiles load their checked-out
+completion integration directly; `+keys` additionally loads the keybindings.
