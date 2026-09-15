@@ -75,22 +75,25 @@ zi pack"bgn-binary" for fzf
 Provides the fuzzy finder via Makefile-installation of the `fzf` binary under `$ZPFX/bin`.
 
 ```zsh
-zi lucid as=program pick="$ZPFX/bin/(fzf|fzf-tmux)" \
-  atclone="cp shell/completion.zsh _fzf_completion; cp bin/fzf-tmux $ZPFX/bin" \
-    make="PREFIX=$ZPFX install" \
+zi lucid as=program pick="$ZPFX/bin/fzf(|-tmux)" src="shell/completion.zsh" \
+  atclone='GOTOOLCHAIN=local PREFIX=$ZPFX make install && cp -vf bin/fzf(|-tmux) "$ZPFX/bin"' \
     …
 ```
+
+The `default+keys` profile loads `shell/key-bindings.zsh` after the completion.
 
 ## `bin-gem-node` Profile
 
 Provides the fuzzy finder via _shims_, i.e.: automatic forwarder scripts created under `$ZPFX/bin` (which is added to the `$PATH` by default). It needs the [bin-gem-node](https://github.com/z-shell/z-a-bin-gem-node) annex.
 
 ```zsh
-zi lucid as=null make \
-  atclone="cp shell/completion.zsh _fzf_completion" \
-  sbin="fzf;bin/fzf-tmux" \
+zi lucid as=null src="shell/completion.zsh" \
+  atclone='GOTOOLCHAIN=local PREFIX=$ZPFX make install' \
+  sbin="bin/fzf*" \
   …
 ```
+
+The `bgn+keys` profile loads `shell/key-bindings.zsh` after the completion.
 
 ---
 
